@@ -1,0 +1,35 @@
+{
+  "date_range": {
+    "start": "2016-01-04",
+    "end": "2025-12-31"
+  },
+  "inputs": {
+    "dow30_matrix": "/Users/briaweisblat/Desktop/boofus/15C51Project1/dow30_returns.csv",
+    "tbill": "/Users/briaweisblat/Desktop/boofus/15C51Project1/MonthlyTBill.csv",
+    "dia_csv": "/Users/briaweisblat/Desktop/boofus/15C51Project1/dia.csv"
+  },
+  "settings": {
+    "momentum_tc": 0.001,
+    "mean_reversion_tc": 0.001,
+    "mean_reversion_params": {
+      "lookback": 126,
+      "entry": 2.5,
+      "exit": 0.5,
+      "stop_loss": 4.0,
+      "top_n": 5,
+      "rebal_freq_days": 10
+    },
+    "buy_hold_definition": "start_of_period_equal_weight_no_rebalance_liquidate_to_tbill"
+  },
+  "row_counts": {
+    "returns_daily": 12689,
+    "returns_monthly": 720,
+    "series_manifest": 6
+  },
+  "sanity": {
+    "dia_overlap_days": 2513,
+    "momentum_non_null_months": 120,
+    "mean_reversion_non_zero_days": 2375,
+    "buy_hold_start_constituents": 29
+  }
+}
